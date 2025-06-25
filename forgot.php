@@ -17,9 +17,9 @@
 
     <div class="login-container">
         <div class="login-box">
-            <form action="auth_login.php" method="post">
-                <h2>Selamat Datang</h2>
-                <p class="subtitle">Silakan masuk untuk melanjutkan</p>
+            <form action="auth_forgor.php" method="post">
+                <h2>Lupa Password</h2>
+                <p class="subtitle">Silakan masukan username kamu</p>
 
                 <?php
                 // Tampilkan pesan error jika ada dari auth_login.php
@@ -34,19 +34,19 @@
 
                 <div class="input-group">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="user" placeholder="Username" required>
+                    <input type="text" name="user" placeholder="Username Kamu" required>
                 </div>
                 
                 <div class="input-group">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Password Baru" required>
                 </div>
 
                 <div class="options">
-                    <label>
-                        <input type="checkbox" name="remember"> Ingat saya
+                    <label style="visibility:hidden">
+                        Ingat saya
                     </label>
-                    <a href="forgot.php">Lupa Password?</a>
+                    <a href="login.php">Kembali</a>
                 </div>
 
                 <button type="submit" name="submit" class="login-btn">Login</button>

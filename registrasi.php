@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Digital Library</title>
+    <title>Registrasi - Digital Library</title>
     
     <link rel="stylesheet" href="style.css">
     
@@ -17,9 +17,9 @@
 
     <div class="login-container">
         <div class="login-box">
-            <form action="auth_login.php" method="post">
-                <h2>Selamat Datang</h2>
-                <p class="subtitle">Silakan masuk untuk melanjutkan</p>
+            <form action="auth_regist.php" method="post">
+                <h2>Registrasi</h2>
+                <p class="subtitle">Silakan masukan data diri kamu</p>
 
                 <?php
                 // Tampilkan pesan error jika ada dari auth_login.php
@@ -34,6 +34,16 @@
 
                 <div class="input-group">
                     <i class="fas fa-user"></i>
+                    <input type="text" name="firstname" placeholder="First Name" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="lastname" placeholder="Last Nama" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
                     <input type="text" name="user" placeholder="Username" required>
                 </div>
                 
@@ -43,17 +53,14 @@
                 </div>
 
                 <div class="options">
-                    <label>
-                        <input type="checkbox" name="remember"> Ingat saya
-                    </label>
-                    <a href="forgot.php">Lupa Password?</a>
+                    <a href="login.php">Sudah Memiliki Akun?</a>
                 </div>
 
-                <button type="submit" name="submit" class="login-btn">Login</button>
+            
 
-                <div class="register-link">
-                    <p>Belum punya akun? <a href="registrasi.php">Daftar sekarang</a></p>
-                </div>
+                <button type="submit" name="submit" class="login-btn">Daftar</button>
+
+                
             </form>
         </div>
     </div>
