@@ -12,6 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .success-message {
+ background: rgba(76, 175, 80, 0.2); 
+  color: #fffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid rgba(76, 175, 80, 0.2);;
+}
+    </style>
 </head>
 <body>
 
@@ -27,8 +38,18 @@
                     $message = 'Username atau password salah!';
                     if ($_GET['error'] == 'empty') {
                         $message = 'Username dan password tidak boleh kosong!';
-                    }
+                    } else
                     echo '<div class="error-message">' . htmlspecialchars($message) . '</div>';
+                }
+
+                else if(isset($_GET['message'])){
+                     if ($_GET['message'] == 'regist') {
+                         $message = "Akun Anda Berhasil Dibuat!";
+                    }else if ($_GET['message'] == 'forgot') {
+                         $message = "Password Akun Anda Berhasil Di ubah!";
+                    }
+                   
+                     echo '<div class="success-message">' . htmlspecialchars($message) . '</div>';
                 }
                 ?>
 

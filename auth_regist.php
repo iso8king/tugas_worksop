@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
     mysqli_stmt_bind_param($stmt, "ssss", $username, $hashed_password, $firstname, $lastname);
 
     if (mysqli_stmt_execute($stmt)) {
-        header("Location: login.php?register=success");
+        header("Location: login.php?message=regist");
         exit();
     } else {
         header("Location: registrasi.php?error=failed");

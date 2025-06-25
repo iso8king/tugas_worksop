@@ -26,9 +26,9 @@ if (isset($_POST['submit'])) {
         mysqli_stmt_bind_param($stmt, "ss", $hashed_pass , $user);
         mysqli_stmt_execute($stmt);
        if (mysqli_stmt_affected_rows($stmt) > 0) {
-        header("Location: login.php");
+        header("Location: login.php?message=forgot");
         } else {
-        header("Location: login.php");
+        header("Location: forgot.php?error=message");
         }
 exit();
 

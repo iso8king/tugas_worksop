@@ -53,6 +53,9 @@
                 </div>
 
                 <div class="options">
+                   <label style="visibility:hidden">
+                        Ingat saya
+                    </label>
                     <a href="login.php">Sudah Memiliki Akun?</a>
                 </div>
 
